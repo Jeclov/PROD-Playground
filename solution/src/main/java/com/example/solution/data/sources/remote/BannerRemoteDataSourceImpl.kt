@@ -10,6 +10,20 @@ import com.example.prod_playground.core.api.domain.models.BannerItem
 class BannerRemoteDataSourceImpl(private val api: BannersApi) : BannerRemoteDataSource {
 
     override fun getBanner(): BannerItem? {
-        AppSe
+        //AppSe
+        // Необходимо реализовать BannerRemoteDataSourceImpl,
+        // который производит запрос на получение данных из сети
+        // BannerRemoteDataSourceImpl должен реализовывать интерфейс BannerRemoteDataSource
+        val BannerInf = api.getBanner()
+        // Что содержит баннер
+        // public final data class BannerItem(
+        //    val id: String,
+        //    val title: String,
+        //    val description: String,
+        //    val imageId: String,
+        //    val backgroundColor: String
+        //)
+
+        return BannerInf
     }
 }

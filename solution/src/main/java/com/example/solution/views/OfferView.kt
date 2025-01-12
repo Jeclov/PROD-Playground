@@ -8,6 +8,7 @@ import android.util.AttributeSet
 import android.util.TypedValue
 import android.view.ViewGroup
 import android.widget.ImageButton
+import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.widget.AppCompatImageView
@@ -16,6 +17,7 @@ import androidx.constraintlayout.widget.ConstraintSet
 import androidx.core.content.res.ResourcesCompat
 import com.example.solution.R
 import com.example.solution.utils.extensions.dpToPx
+import com.example.solution.utils.extensions.imageIdToResId
 import com.example.solution.utils.extensions.spToPx
 
 
@@ -32,6 +34,12 @@ class OfferView @JvmOverloads constructor(
     defStyleAttr: Int = 0,
 ) : LinearLayout(context, attrs, defStyleAttr) {
 
+
+    private lateinit var offerTitle: TextView
+    private lateinit var offerText: TextView
+    private lateinit var offerPer: TextView
+    private lateinit var offerImage: ImageView
+    private lateinit var offerPic: ImageView
     /**
      * Устанавливает Название спецпредложения
      *
@@ -39,6 +47,10 @@ class OfferView @JvmOverloads constructor(
      */
     fun setOfferName(name: String) {
         // TODO add logic
+        offerTitle = findViewById(R.id.offerInfoHeaderTitle)
+        offerTitle.text = name
+
+
     }
 
     /**
@@ -48,6 +60,8 @@ class OfferView @JvmOverloads constructor(
      */
     fun setOfferDescription(shortDescription: String) {
         // TODO add logic
+        offerText = findViewById(R.id.offerInfoHeaderTitle)
+        offerText.text = shortDescription
     }
 
     /**
@@ -57,6 +71,9 @@ class OfferView @JvmOverloads constructor(
      */
     fun setCashBackValue(cashBackValue: String) {
         // TODO add logic
+        offerPer = findViewById(R.id.offerInfoHeaderTitle)
+        offerPer.text = cashBackValue
+
     }
 
     /**
@@ -66,6 +83,7 @@ class OfferView @JvmOverloads constructor(
      */
     fun setBackgroundColor(colorHex: String) {
         // TODO add logic
+
     }
 
     /**
@@ -75,6 +93,8 @@ class OfferView @JvmOverloads constructor(
      */
     fun setImage(imageResId: Int) {
         // TODO add logic
+        offerPic = findViewById(R.id.offerImage)
+        offerPic.setImageResource(imageResId)
     }
 
     /**
@@ -105,6 +125,9 @@ class OfferView @JvmOverloads constructor(
      * input: Лямбда с действием которое выполниться после нажатия
      */
     fun setLikeButtonClickListener(onClick: () -> Unit) {
-        // TODO add logic
+        offerImage.setOnClickListener{
+            onClick()
+        }
+
     }
 }

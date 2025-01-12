@@ -8,6 +8,7 @@ import android.graphics.drawable.GradientDrawable
 import android.util.AttributeSet
 import android.util.TypedValue
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.widget.AppCompatImageView
@@ -31,6 +32,10 @@ class OfferInfoHeaderView @JvmOverloads constructor(
     defStyleAttr: Int = 0,
 ) : LinearLayout(context, attrs, defStyleAttr) {
 
+    private lateinit var infoHeaderTitle: TextView
+    private lateinit var infoHeaderText: TextView
+    private lateinit var infoHeaderImage: ImageView
+    //private lateinit var infoHeaderBack: AppCompatImageView
     /**
      * Устанавливает Процент кэшбека
      *
@@ -38,6 +43,8 @@ class OfferInfoHeaderView @JvmOverloads constructor(
      */
     fun setCashBackValue(cashBackValue: String) {
         // TODO add logic
+        infoHeaderTitle = findViewById(R.id.offerInfoHeaderTitle)
+        infoHeaderTitle.text = cashBackValue
     }
 
     /**
@@ -47,6 +54,8 @@ class OfferInfoHeaderView @JvmOverloads constructor(
      */
     fun setCashBackName(cashBackName: String) {
         // TODO add logic
+        infoHeaderText = findViewById(R.id.offerInfoHeaderTitle)
+        infoHeaderText.text = cashBackName
     }
 
     /**
@@ -56,6 +65,8 @@ class OfferInfoHeaderView @JvmOverloads constructor(
      */
     fun setImage(imageResId: Int) {
         // TODO add logic
+        infoHeaderImage = findViewById(R.id.offerInfoHeaderTitle)
+        infoHeaderImage.setImageResource(imageResId)
     }
 
     /**
@@ -65,6 +76,7 @@ class OfferInfoHeaderView @JvmOverloads constructor(
      */
     fun setBackgroundColor(colorHex: String) {
         // TODO add logic
+        //infoHeaderBack = findViewById(R.layout.view_offer_info_header);
     }
 
     //TODO add UI

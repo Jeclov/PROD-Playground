@@ -13,6 +13,12 @@ class BundlesRepositoryImpl(
     private val remoteDataSource: BundlesRemoteDataSource
 ) : BundlesRepository {
 
+    // Необходимо реализовать BundlesRepositoryImpl для данных о подписках и
+    // выбора между данными из кеша BundlesLocalDataSource или
+    // BundlesRemoteDataSource в зависимости от наличия данных.
+    //
+    // BundlesRepositoryImpl должен реализовывать интерфейс BundlesRepository
+
     override fun getBundles(): List<BundleInfo> {
         return emptyList()
     }

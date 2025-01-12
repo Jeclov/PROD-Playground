@@ -12,4 +12,6 @@ class OperationsRemoteDataSourceImpl(private val api: OperationsApi) : Operation
     override fun getOperations(): List<OperationInfo> {
         return emptyList()
     }
+    // Необходимо реализовать OperationsRemoteDataSourceImpl,
+    // который вызывает OperationsApi и получает от него объект.
 }

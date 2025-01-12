@@ -15,7 +15,10 @@ class DefaultBannersApi(private val jsonProvider: JsonProvider) : BannersApi {
     override fun getBanner(): BannerItem? {
 
         val strJSON = jsonProvider.bannerInfoJson // String
-
+        // Необходимо реализовать DefaultBannersApi,
+        // который получает JSON jsonProvider.bannerInfoJson и преобразует его в объект типа BannerItem.
+        // DefaultBannersApi должен реализовывать интерфейс BannersApi.
+        //
 
         // strJSON -> BannerItem
 

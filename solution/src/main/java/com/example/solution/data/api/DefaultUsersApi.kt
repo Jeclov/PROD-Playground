@@ -12,4 +12,7 @@ class DefaultUsersApi(private val jsonProvider: JsonProvider) : UsersApi {
     override fun getUser(userId: String): UserInfo {
         TODO()
     }
+    // Необходимо реализовать DefaultUsersApi,
+    // который получает JSON из jsonProvider и парсит его в объект типа UserInfo.
+    //
 }

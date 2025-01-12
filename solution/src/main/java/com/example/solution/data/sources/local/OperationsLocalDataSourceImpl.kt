@@ -11,6 +11,16 @@ class OperationsLocalDataSourceImpl : OperationsLocalDataSource {
     override fun getOperations(): List<OperationInfo> {
         return emptyList()
     }
+    // Необходимо реализовать OperationsLocalDataSourceImpl,
+    // который сохраняет во внутреннюю переменную данные,
+    // переданные в метод cacheOperations и возвращает их при вызове getOperations()
+    //
+    // При отсутствии закешированных данных метод
+    // OperationsLocalDataSourceImpl.getOperations() возвращает пустой список.
+    //
+    // OperationsLocalDataSourceImpl должен реализовывать интерфейс OperationsLocalDataSource
+    //
+    //
 
     override fun cacheOperations(operations: List<OperationInfo>) = Unit
 }

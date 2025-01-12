@@ -17,6 +17,12 @@ class DefaultOffersApi(private val jsonProvider: JsonProvider) : OffersApi {
     ): List<OfferInfo> {
         return emptyList()
     }
+    // Необходимо реализовать DefaultOffersApi,
+    // который получает JSON из jsonProvider.offersJson и
+    // возвращает список объектов типа OfferInfo в одном методе и
+    // объект типа OfferFullInfo в другом
+    //
+    // DefaultOffersApi должен реализовывать интерфейс OffersApi
 
     override fun getFullOffer(id: String, userId: String): OfferFullInfo {
         TODO()

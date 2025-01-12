@@ -10,6 +10,12 @@ import com.example.prod_playground.core.api.domain.models.UserInfo
 class UserInfoRemoteDataSourceImpl(private val api: UsersApi) : UserInfoRemoteDataSource {
 
     override fun getUserInfo(): UserInfo {
-        TODO()
+        return UserInfo("","","","")
+        // TODO()
     }
+
+    // Необходимо реализовать UserInfoRemoteDataSourceImpl,
+    // который вызывает UsersApi и получает от него объект.
+    //
+    //UserInfoRemoteDataSourceImpl должен реализовывать интерфейс UserInfoRemoteDataSource
 }

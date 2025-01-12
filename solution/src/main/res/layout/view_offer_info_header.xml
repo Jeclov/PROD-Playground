@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/viewofferinfoheader"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffc6c6">
+
+    <TextView
+        android:id="@+id/offerInfoHeaderTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="90dp"
+        android:fontFamily="@font/sfpro_bold"
+        android:includeFontPadding="true"
+        android:text="Title"
+        android:textColor="#000"
+        android:textSize="36sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/offerInfoHeaderText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="@font/sfpro_bold"
+        android:includeFontPadding="true"
+        android:text="Text"
+        android:textSize="24sp"
+        android:textColor="#000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/offerInfoHeaderImage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/offerInfoHeaderTitle" />
+
+    <ImageView
+
+        android:id="@+id/offerInfoHeaderImage"
+        android:layout_width="122dp"
+        android:layout_height="122dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/offer_card_image" />
+</androidx.constraintlayout.widget.ConstraintLayout>

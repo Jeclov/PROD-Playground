@@ -12,4 +12,9 @@ class DefaultBundlesApi(private val jsonProvider: JsonProvider) : BundlesApi {
     override fun getBundles(): List<BundleInfo> {
         return emptyList()
     }
+    // Необходимо реализовать DefaultBundlesApi,
+    // который получает JSON из jsonProvider.bundlesJson и
+    // возвращает список объектов типа BundleInfo
+    //
+    // DefaultBundlesApi должен реализовывать интерфейс BundlesApi
 }

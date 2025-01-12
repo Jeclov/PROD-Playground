@@ -32,6 +32,7 @@ class PromoCodeView @JvmOverloads constructor(
     defStyleAttr: Int = 0,
 ) : LinearLayout(context, attrs, defStyleAttr) {
 
+    private lateinit var promo: TextView
     /**
      * Устанавливает значение промокода
      *
@@ -39,5 +40,9 @@ class PromoCodeView @JvmOverloads constructor(
      */
     fun setPromoCodeValue(value: String) {
         // TODO add logic
+        promo = findViewById(R.id.offerInfoHeaderTitle)
+        promo.text = value
     }
+
+    //TODO make some logic for clipboard
 }

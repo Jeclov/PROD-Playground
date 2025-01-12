@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/offerGrayBack"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:baselineAlignBottom="false"
+        android:foregroundGravity="bottom"
+        android:scaleType="fitEnd"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/back_for_offer_grey" />
+
+    <ImageView
+        android:id="@+id/offerPinkBack"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:baselineAlignBottom="false"
+        android:foregroundGravity="bottom"
+        android:scaleType="fitEnd"
+        app:layout_constraintBottom_toBottomOf="@+id/offerImage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/offerGrayBack"
+        app:srcCompat="@drawable/back_for_offer_pink" />
+
+    <ImageView
+        android:id="@+id/offerImage"
+        android:layout_width="86dp"
+        android:layout_height="86dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/offerTitle"
+        app:srcCompat="@drawable/offer_card_image" />
+
+    <TextView
+        android:id="@+id/offerTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/sfpro_semibold"
+        android:includeFontPadding="false"
+        android:text="Заголовок"
+        android:textColor="#000"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toStartOf="@+id/offerPercentage"
+        app:layout_constraintStart_toStartOf="@+id/offerPinkBack"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/offerPercentage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/sfpro_semibold"
+        android:includeFontPadding="false"
+        android:text="@string/offer_view_cash_back_value_mask"
+        android:textColor="#000"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/offerText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:fontFamily="@font/sfpro_regular"
+        android:includeFontPadding="true"
+        android:text="Совершайте покупки.."
+        android:textSize="15sp"
+        android:textColor="#000"
+        app:layout_constraintBottom_toBottomOf="@+id/offerPinkBack"
+        app:layout_constraintEnd_toEndOf="@+id/offerTitle"
+        app:layout_constraintStart_toEndOf="@+id/offerImage"
+        app:layout_constraintTop_toBottomOf="@+id/offerTitle" />
+
+    <TextView
+        android:id="@+id/offerButPrem"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/prem_button_style"
+        android:fontFamily="@font/sfpro_bold"
+        android:includeFontPadding="true"
+        android:paddingLeft="14dp"
+        android:paddingTop="3.5dp"
+        android:paddingRight="14dp"
+        android:paddingBottom="3.5dp"
+        android:text="Prenuim"
+        android:textColor="#ffffff"
+        android:textSize="8sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/offerImage" />
+
+    <TextView
+        android:id="@+id/offerPremText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:fontFamily="@font/sfpro_medium"
+        android:includeFontPadding="true"
+        android:text="@string/offer_view_bundle_hint"
+        android:textColor="#9A9A9A"
+        android:textSize="8sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/offerButPrem"
+        app:layout_constraintTop_toBottomOf="@+id/offerImage" />
+
+    <ImageView
+        android:id="@+id/offerButLike"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:padding="8dp"
+        android:background="@drawable/circle_for_offer_grey"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/offerPinkBack"
+        app:srcCompat="@drawable/small_gray_heart" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

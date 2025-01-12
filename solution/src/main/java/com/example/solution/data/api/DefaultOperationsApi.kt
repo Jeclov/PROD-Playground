@@ -12,4 +12,6 @@ class DefaultOperationsApi(private val jsonProvider: JsonProvider) : OperationsA
     override fun getOperations(userId: String): List<OperationInfo> {
         return emptyList()
     }
+    // Необходимо реализовать DefaultOperationsApi,
+    // который получает JSON из jsonProvider и парсит его в список объектов типа OperationInfo.
 }
